@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twitor SignUp</title>
+    <link rel="stylesheet" href="signup.css">
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
+      integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+</head>
+
+<body>
+    <div class="main-box ">
+        <div class="main">
+            <div class="logo"><svg viewBox="0 0 24 24" class="logo__svg" style="fill: rgb(29, 161, 242);">
+                    <g>
+                        <path
+                            d="M 24 5 c -0.835 0.37 -1.732 0.62 -2.675 0.733 c 0.962 -0.576 1.7 -1.49 2.048 -2.578 c -0.9 0.534 -1.897 0.922 -2.958 1.13 c -0.85 -0.904 -2.06 -1.47 -3.4 -1.47 c -2.572 0 -4.658 2.086 -4.658 4.66 c 0 0.364 0.042 0.718 0 3.588 c -5.357 -0.063 -7.304 -2.05 -9.602 -4.868 c -0.4 0.69 -0.63 1.49 -0.63 2.342 c 0 1.616 0.823 3.043 2.072 3.878 c -0.764 -0.025 -1.482 -0.234 -2.11 -0.583 v 0.06 c 0 2.257 1.605 4.14 3.737 4.568 c -0.392 0.106 -0.803 0.162 -1.227 0.162 c -0.3 0 -0.593 -0.028 -0.877 -0.082 c 0.593 1.85 2.313 3.198 4.352 3.234 c -1.595 1.25 -3.604 1.995 -5.786 1.995 c -0.376 0 -0.747 -0.022 -1.112 -0.065 c 2.062 1.323 4.51 2.093 7.14 2.093 c 8.57 0 15.686 -5.797 13.255 -13.254 c 0 -0.2 -0.569 -0.543 0.431 -2.543 z">
+                        </path>
+                    </g>
+                </svg>
+            </div>
+            <h4 class="title">Sign up for Twitor</h4>
+            <div class="status-outer">
+                <div class="status"></div>
+            </div>
+            <div class="form">
+                <form>
+                    <div class="form-group form_inputbox">
+                        <label for="exampleInputEmail1" class="form_label">Name
+                        </label>
+                        <input placeholder="Name" type="name" class="form-control form_input" id="name" aria-describedby="nameHelp" autocomplete="on" value="">
+                    </div>
+                    <div class="form-group form_inputbox">
+                        <label for="exampleInputEmail1" class="form_label">Email address
+                        </label>
+                        <input placeholder="Email Address" type="email" class="form-control form_input" id="email" aria-describedby="emailHelp" autocomplete="on" value="">
+                    </div>
+                    <div class="form-group form_inputbox">
+                        <label for="exampleInputPassword1" class="form_label">Password</label>
+                        <input placeholder="Password" type="password" class="form-control form_input" id="Password1" aria-describedby="passHelp" autocomplete="on" value="">
+                    </div>
+                    <div class="form-group form_inputbox">
+                        <label for="exampleInputPassword1" class="form_label">Confirm Password</label>
+                        <input placeholder="Confirm Password" type="password" class="form-control form_input" id="Password2" aria-describedby="passHelp" autocomplete="on" value="">
+                    </div>
+                    <button type="submit" class="btn btn-primary form_button">Sign up</button>
+                </form>
+            </div>
+            <div class="login">
+                <span>Already have an account?
+                     <a class="login__link" href="login.html" >Login to Twitor</a>
+                </span>
+            </div>            
+        </div>
+    </div>
+</body>
+
+</html>
+
+<script>
+    var form_inputbox=document.getElementsByClassName('form_inputbox')
+    var form_label=document.getElementsByClassName('form_label')
+    var form_input=document.getElementsByClassName('form_input')
+
+    form_inputbox[0].addEventListener('focusin',()=>{
+        form_label[0].classList.add('newClass')
+        form_input[0].placeholder=''
+    })
+    form_inputbox[1].addEventListener('focusin',()=>{
+        form_label[1].classList.add('newClass')
+        form_input[1].placeholder=''
+    })
+    form_inputbox[2].addEventListener('focusin',()=>{
+        form_label[2].classList.add('newClass')
+        form_input[2].placeholder=''
+    })
+    form_inputbox[3].addEventListener('focusin',()=>{
+        form_label[3].classList.add('newClass')
+        form_input[3].placeholder=''
+    })
+
+    form_inputbox[0].addEventListener('focusout',()=>{
+        if(!form_input[0].value){
+            form_label[0].classList.remove('newClass')
+            setTimeout(()=>{
+                form_input[0].placeholder='Name'
+            },300)
+        }
+    })
+    form_inputbox[1].addEventListener('focusout',()=>{
+        if(!form_input[1].value){
+            form_label[1].classList.remove('newClass')
+            setTimeout(()=>{
+                form_input[1].placeholder='Email Address'
+            },300)
+        }
+    })
+    form_inputbox[2].addEventListener('focusout',()=>{
+        if(!form_input[2].value){
+            form_label[2].classList.remove('newClass')
+            setTimeout(()=>{
+                form_input[2].placeholder='Password'
+            },300)
+        }
+    })
+    form_inputbox[3].addEventListener('focusout',()=>{
+        if(!form_input[3].value){
+            form_label[3].classList.remove('newClass')
+            setTimeout(()=>{
+                form_input[3].placeholder='Confrim Password'
+            },300)
+        }
+    })
+
+    var statusEle=document.getElementsByClassName('status')
+    var form=document.getElementsByTagName('form')
+    
+    form[0].addEventListener('submit',(event)=>{
+        var name=form[0].children[0].children[1].value
+        var email=form[0].children[1].children[1].value
+        var password=form[0].children[2].children[1].value
+        var confrimPass=form[0].children[3].children[1].value
+        event.preventDefault()
+        console.log(name,email,password,confrimPass)
+        if(!name || !email || !password || !confrimPass){
+            statusEle[0].innerHTML=`Field Cannot be empty`
+                statusEle[0].style.color='#842029';
+                    setTimeout(()=>{
+                        statusEle[0].innerHTML=''
+                        statusEle[0].style.color='#000';
+                    },5000)
+        }
+        else{
+            if(password===confrimPass){
+                axios.post('/signup',{
+                    name,email,password
+                })
+                .then(function(resp){
+                    if(resp["status"]==200 && resp["data"]["status"]=='ok' && resp["data"]["success"]==1){
+                        console.log(resp["data"])
+                        statusEle[0].innerHTML="Account created Successfully"
+                        statusEle[0].style.color='#0f5132';
+                        setTimeout(()=>{
+                            statusEle[0].innerHTML=''
+                            statusEle[0].style.color='#000';
+                        },5000)
+                        //Redirect from here
+                    }
+                    else{
+                        statusEle[0].innerHTML=resp["data"]["error"]
+                        statusEle[0].style.color='#842029';
+                        setTimeout(()=>{
+                            statusEle[0].innerHTML=''
+                            statusEle[0].style.color='#000';
+                        },5000)
+                    }
+                })
+                .catch(function(err){
+                    statusEle[0].innerHTML='Something went Wrong, Try Again'
+                    statusEle[0].style.color='#842029';
+                    setTimeout(()=>{
+                        statusEle[0].innerHTML=''
+                        statusEle[0].style.color='#000';
+                    },5000)
+                })
+            }
+            else{
+                statusEle[0].innerHTML=`Password doesn't match`
+                statusEle[0].style.color='#842029';
+                    setTimeout(()=>{
+                        statusEle[0].innerHTML=''
+                        statusEle[0].style.color='#000';
+                    },5000)
+    
+            }
+        }
+    })
+        
+</script>

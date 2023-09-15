@@ -1,0 +1,440 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+        <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
+      integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+		<!-- meta tag  -->
+		<meta charset="UTF-8" />
+
+		<!-- SEO - Search Engine  meta tags -->
+		<meta
+			name="description"
+			content="Twitter Clone build With Node.js and Vanilla Javascript "
+		/>
+		<meta name="keywords" content="HTML, CSS, JavaScript Node.Js " />
+		<meta name="author" content="Saddam Arbaa" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<!-- First Mobile Viewport  -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<!-- Google Web Fonts link  -->
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+			rel="stylesheet"
+		/>
+
+		<!-- Normalize.css to makes browsers render all elements more consistently and in line with modern standards.  -->
+		<link rel="stylesheet" href="./public/normalize.css" />
+
+		<!-- font Awesome Library  -->
+		<link rel="stylesheet" href="./public/all.min.css" />
+
+		<!-- general Rules.css css file  -->
+		<link rel="stylesheet" href="./generalRules.css" />
+
+		<!-- main Tweets.css css file  -->
+		<link rel="stylesheet" href="./mainTweets.css" />
+
+		<!-- Tweet css file  -->
+		<link rel="stylesheet" href="./tweet.css" />
+
+		<!-- right Sidebar css file  -->
+		<link rel="stylesheet" href="./rightSidebar.css" />
+
+		<!-- left Sidebar css file  -->
+		<link rel="stylesheet" href="./leftSidebar.css" />
+
+		<!-- sessions.Js file -->
+		<!-- load this one directly -->
+		
+
+		<!-- Main Js file  -->
+		
+
+		<!-- Tweet Js file  -->
+		<script src="./tweet.js" defer></script>
+
+		<!-- moment.js cdn link  -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+		<script
+			src="https://kit.fontawesome.com/c939d0e917.js"
+			crossorigin="anonymous"
+		></script>
+
+		<!-- title -->
+		<title>Twitter Clone</title>
+	</head>
+	<body>
+		<div class="container">
+			<span class="sign-in-login" id="removeTokenButton" onclick="LogOut()">
+				<i class="fas fa-sign-in-alt"></i>
+				Sign Out
+			</span>
+			<!-- grid container -->
+			<div class="grid-container">
+				<!-- Start left sidebar -->
+				<div class="navigation-leftSidebar-wrapper padding20">
+					<div class="logo side-icon">
+						<i class="fab fa-twitter fa-2x"></i>
+					</div>
+
+					<div class="profile-wrapper">
+						<div class="profile">
+							<img src="./assets/img/profle.jpg" alt="profile" />
+						</div>
+					</div>
+
+					<div class="home side-icon">
+						<i class="fas fa-home"></i>
+						<span>Home</span>
+					</div>
+
+					<div class="search side-icon">
+						<i class="fas fa-search"></i>
+						<span>Search</span>
+					</div>
+
+					<div class="explore side-icon">
+						<i class="fas fa-hashtag"></i>
+						<span>Explore</span>
+					</div>
+
+					<div
+						class="notifications side-icon"
+						data-progress="3"
+						id="notifications"
+					>
+						<i class="far fa-bell"></i>
+						<span>Notifications</span>
+					</div>
+
+					<div class="message side-icon">
+						<i class="fas fa-envelope-square"></i>
+						<span> Message</span>
+					</div>
+
+					<div class="user side-icon">
+						<i class="far fa-user"></i>
+						<span> Profile</span>
+					</div>
+
+					<div class="more side-icon">
+						<i class="far fa-comment-dots"></i>
+						<span>More</span>
+					</div>
+
+					<div class="tweet side-icon" id="myBtn"><span>Tweet</span></div>
+					<div class="add side-icon">
+						<i class="fas fa-plus-circle" id="secondClosingdBtn"></i>
+					</div>
+				</div>
+				<!-- End left sidebar -->
+
+				<!-- Start main container -->
+				<div class="tweets-main-wrapper padding-top20">
+					<div class="tweets-home-container">
+						<div class="home">Home</div>
+						<i class="far fa-star"></i>
+					</div>
+					
+					<div class="tweets-list-container" id="tweets-list-container">
+						<div class="tweets-user-info">
+							<div class="image"></div>
+							<div class="info">
+								<div class="name">Coach | Saddam Arbaa</div>
+								<div class="twitter-name">@ArbaaSaddam</div>
+							</div>
+
+							<div class="tweets-user-info-add">
+								<i class="fas fa-ellipsis-h" title="More"></i>
+							</div>
+						</div>
+
+						<div class="tweets-text-container">
+							<p>
+								Hi everyone - I am looking for a new role and would
+								appreciate your support. Thank you in advance for any
+								connections, advice, or opportunities you can offer.
+								<span class="hastag"
+									>#OpenToWork #opportunities #job #search #hiring
+									#recruiting</span
+								>
+							</p>
+						</div>
+
+						<div class="tweets-images-container">
+							<div class="img">
+								<img
+									src="./assets/img/w-removebg-preview.png"
+									alt="img"
+									loading="lazy"
+								/>
+							</div>
+							<div class="img">
+								<img
+									src="./assets/img/ww-removebg-preview.png"
+									alt="img"
+									loading="lazy"
+								/>
+							</div>
+							<div class="img">
+								<img
+									src="./assets/img/profle-removebg-preview.png"
+									alt="img"
+									loading="lazy"
+								/>
+							</div>
+						</div>
+						<div class="tweets-date-container">20 hours age</div>
+						<div class="tweets-addtional-container">
+							<i title="Reply" class="far fa-comments reply"></i>
+							<i title="share" class="fas fa-retweet"></i>
+							<i title="Like" class="fas fa-heart">&nbsp; &nbsp; 20</i>
+							<i title="Share" class="fas fa-share-alt"></i>
+						</div>
+					</div>
+
+					<!-- Next page -->
+					<!-- onclick call next page function -->
+					<div class="next-page-conatiner" onclick="onNextPage()">
+						<i
+							onclick="onNextPage()"
+							title="next page "
+							class="fas fa-arrow-right fa-rotate-90"
+						></i>
+					</div>
+				</div>
+				<!-- End main container -->
+
+				<!-- Start right sidebar -->
+				<div class="tweets-rightSidebar-wrapper padding20">
+					<div class="tweet-sidebar">
+						<div class="trends heading-trend">
+							<div class="trend heading">
+								Trends for you
+								<i class="fas fa-cog" title="Setting"></i>
+							</div>
+						</div>
+
+						<div class="trends">
+							<div class="trend">
+								<p onclick="selectTrend(this)">#coding</p>
+								<i class="fas fa-ellipsis-h" title="More"></i>
+								<span class="trending-type">Trending in Coding</span>
+
+								<span class="number-of-tweets">62.6K Tweets</span>
+							</div>
+						</div>
+
+						<div class="trends">
+							<div class="trend">
+								<p onclick="selectTrend(this)">#JavaScript</p>
+
+								<i class="fas fa-ellipsis-h" title="More"></i>
+								<span class="trending-type"
+									>Trending in Vanilla JS</span
+								>
+								<span class="number-of-tweets">106.6K Tweets</span>
+							</div>
+						</div>
+
+						<div class="trends">
+							<div class="trend">
+								<p onclick="selectTrend(this)">#React</p>
+
+								<i class="fas fa-ellipsis-h" title="More"></i>
+								<span class="trending-type">Trending in React JS </span>
+								<span class="number-of-tweets">752.6K Tweets</span>
+							</div>
+						</div>
+
+						<div class="trends">
+							<div class="trend">
+								<p onclick="selectTrend(this)">#100daysofcode</p>
+
+								<i class="fas fa-ellipsis-h" title="More"></i>
+								<span class="trending-type"
+									>Trending in 100daysofcode</span
+								>
+								<span class="number-of-tweets">12752.6K Tweets</span>
+							</div>
+						</div>
+						<div class="trends">
+							<div onclick="selectTrend(this)" class="trend">
+								Show More
+							</div>
+						</div>
+					</div>
+
+					<div class="tweet-sidebar topic-to-flow">
+						<div class="trends heading-trend">
+							<div class="trend heading">Topics to follow</div>
+						</div>
+
+						<div class="trends">
+							<div class="trend">
+								<div>
+									<p onclick="selectTrend(this)">News</p>
+									<span onclick="selectTrend(this)">COVID-19</span>
+								</div>
+								<div class="btton-container">
+									<button>Flow</button>
+									<i class="fas fa-times"></i>
+								</div>
+							</div>
+						</div>
+
+						<div class="trends">
+							<div class="trend">
+								<div>
+									<p onclick="selectTrend(this)">Internship</p>
+									<span onclick="selectTrend(this)"
+										>Coding future</span
+									>
+								</div>
+
+								<div class="btton-container">
+									<button>Flow</button>
+									<i class="fas fa-times"></i>
+								</div>
+							</div>
+						</div>
+
+						<div class="trends">
+							<div class="trend">
+								<div>
+									<p onclick="selectTrend(this)">Scholarships</p>
+									<span onclick="selectTrend(this)">Eduction</span>
+								</div>
+
+								<div class="btton-container">
+									<button>Flow</button>
+									<i class="fas fa-times"></i>
+								</div>
+							</div>
+						</div>
+
+						<div class="trends">
+							<div class="trend">
+								<div>
+									<p onclick="selectTrend(this)">VS Code</p>
+									<span onclick="selectTrend(this)">Code editor</span>
+								</div>
+								<div class="btton-container">
+									<button>Flow</button>
+									<i class="fas fa-times"></i>
+								</div>
+							</div>
+						</div>
+
+						<div class="trends">
+							<div onclick="selectTrend(this)" class="trend">
+								Show More
+							</div>
+						</div>
+					</div>
+
+					<!-- footer -->
+					<div class="tweet-sidebar copyright">
+						<div class="trends">
+							<p>
+								&copy; 2021 <span>Twitter , Inc.</span> All Right
+								Reversed
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Start the Footer Section -->
+
+		<!-- Start Scroll top button -->
+		<button id="scrollToTopBtn" class="back-to-top">
+			<i class="fas fa-angle-double-up"> </i>
+		</button>
+		<!-- End Scroll top button -->
+
+		<!-- The Modal -->
+		<div id="myModal" class="modal">
+			<!-- Modal content -->
+			<div class="modal-content">
+				<div class="close-btn-continer">
+					<span class="close" id="closeSpan" title="close">&times;</span>
+				</div>
+
+				<div class="form-container">
+					<form
+						id="newPostForm"
+						action="myFormAction"
+						method="post"
+						autocomplete="off"
+					>
+						<div class="post-content-container">
+							<textarea
+								name="post-content"
+								id="form-post-content"
+								placeholder="What's happening?"
+								required
+							></textarea>
+						</div>
+
+						<div class="form-footer-wrapper">
+							<div class="post-image-Container">
+								<label for="form-post-image">Choose Image</label>
+								<input
+									type="file"
+									name="post-image"
+									id="form-post-image"
+									accept="image/*"
+								/>
+							</div>
+							<div class="post-button-container">
+								<button class="btn-no-styles" type="submit">
+									<i
+										class="fas fa-plus-circle"
+										title="Add"
+										onclick="submitNewTweet()"
+									></i>
+								</button>
+
+								<button
+									type="submit"
+									id="form-post-submit"
+									onclick="submitNewTweet()"
+								>
+									Tweet
+								</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
+<script>
+    async function dataGet(){
+        var token=localStorage.getItem('token')
+    try{
+        var {data}=await axios.get('/home',{
+            headers:{
+                Authorization:token
+            }
+        })
+        console.log(data)
+    }
+    catch(err){
+        console.log(err)
+    }
+    }
+    dataGet()
+</script>

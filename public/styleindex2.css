@@ -1,0 +1,174 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: url("")
+}
+
+.container {
+    display: flex;
+    background-color: #15202b;
+    height: 100vh;
+}
+
+.col1 {
+    flex: 0.5 1;
+    position: relative;
+    background-color: #5aafe4;
+}
+
+.logo {
+    width: 50%;
+    max-height: 100vh;
+    border-color: #1da1f2;
+    display: inline;
+    fill: #1da1f2;
+}
+
+.info {
+    position: absolute;
+    top: 0px;
+    left: 20%;
+    right: 20%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.col2 {
+    flex: 0.5 1;
+    background-color: #15202b;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 15px;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20vh;
+    margin-right: 20vh;
+    min-width: 60;
+}
+
+.info div:nth-child(1),
+.info div:nth-child(2) {
+    font-size: 15px;
+    margin: 0px 0px 40px;
+}
+
+.info div span {
+    color: #ffffff;
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.info div:nth-child(3) {
+    font-size: 15px;
+}
+
+.indexIcon {
+    width: 19px;
+    fill: white;
+    stroke: white;
+}
+.menu-inside svg{
+    margin-bottom: -6px;
+}
+
+.header {
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.join {
+    margin: 59px 0px 15px;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 700;
+    text-align: center;
+    width: max-content;
+    line-height: 20px;
+}
+
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+}
+
+.signup {
+    align-items: stretch;
+    background-color: #1da1f2;
+    border-color: #000000;
+    border-radius: 9999px;
+    border-style: solid;
+    border-width: 1px;
+    display: flex;
+    flex-direction: column;
+    margin: 0px 0px 15px;
+    padding: 13px 30px;
+    text-decoration: none;
+}
+.signupItem {
+    align-items: center;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+}
+.signupText {
+    color: #ffffff;
+    outline:none;
+    display: inline;
+    font-size: 15px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.signup:hover {
+    background:#fff;
+}
+.signup:hover .signupText{
+    color: #1da1f2;
+}
+.login {
+    align-items: stretch;
+    background-color: #15202b;
+    border-color: #1da1f2;
+    border-radius: 9999px;
+    border-style: solid;
+    border-width: 1px;
+    display: flex;
+    flex-direction: column;
+    margin: 0px 0px 15px;
+    padding: 13px 30px;
+    text-decoration: none;
+}
+
+.loginItem {
+    align-items: center;
+    color: #1da1f2;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.loginText {
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 700;
+    text-align: center;
+}
+.login:hover{
+    background: #ffffffa7;
+}
+.login:hover .loginText{
+    color:#15202b;
+}

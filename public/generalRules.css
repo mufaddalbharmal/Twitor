@@ -1,0 +1,294 @@
+/**
+ *
+ *  @format
+ *  main.css
+ *  These are the final styles for the project.
+ *  Author: Saddam Arbaa
+ */
+
+/*** Start variables ****** */
+:root {
+	--blue: #1da1f2;
+	--black: #0f0f11;
+	--dark-Gray: #657786;
+	--light-Gray: #e1e8ed;
+	--white: #fff;
+	--red: red;
+	--space16: 16px;
+	--space20: 20px;
+	--space25: 25px;
+	--space30: 30px;
+	--space40: 40px;
+	--space50: 50px;
+	--space60: 60px;
+	--space70: 70px;
+	--space80: 80px;
+	--space90: 90px;
+	--space100: 100px;
+	--line-height-space: 1.7;
+	--transition-duration: 0.3s;
+}
+/********** End variables **********/
+
+/********** Start global rules **********/
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+/* fix button outline border on hover */
+*:focus {
+	outline: 0 !important;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: "Poppins", sans-serif;
+	background: var(--black);
+}
+
+ul {
+	list-style: none;
+}
+
+p {
+	line-height: var(--line-height-space);
+}
+
+.container {
+	padding-left: var(--space16);
+	padding-right: var(--space16);
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* login out button */
+.sign-in-login {
+	margin-right: 10px;
+	position: absolute;
+	top: 7px;
+	right: 45px !important;
+	color: var(--blue);
+	padding: var(--space16);
+	cursor: pointer;
+	width: max-content;
+	font-size: 1.2rem;
+	z-index: 110;
+	background-color: transparent;
+	transition: var(--transition-duration);
+	-webkit-transition: var(--transition-duration);
+	-moz-transition: var(--transition-duration);
+	-ms-transition: var(--transition-duration);
+	-o-transition: var(--transition-duration);
+	border-radius: 0.25rem;
+	-webkit-border-radius: 0.25rem;
+	-moz-border-radius: 0.25rem;
+	-ms-border-radius: 0.25rem;
+	-o-border-radius: 0.25rem;
+}
+
+@media (max-width: 992px) {
+	.sign-in-login {
+		margin-right: 5px;
+		right: 15px !important;
+		padding-right: 10px;
+	}
+}
+
+.sign-in-login:hover {
+	background: rgba(101, 119, 134, 0.07);
+	-moz-box-shadow: 1px 1px 3px 2px #657786;
+	-webkit-box-shadow: 1px 1px 3px 2px #657786;
+	box-shadow: 1px 1px 3px 2px #657786;
+	border: 1px solid var(--blue);
+}
+
+/********** End global rules **********/
+
+/********** grid container **********/
+
+.grid-container {
+	display: flex;
+	background: var(--black);
+	width: 100%;
+	flex-wrap: nowrap;
+}
+
+/********** Start Next Page **********/
+.next-page-conatiner {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: var(--white);
+	cursor: pointer;
+	display: none;
+	padding: 20px;
+	margin: 20px 0;
+	border: 1px solid var(--dark-Gray);
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-o-border-radius: 10px;
+}
+
+.next-page-conatiner:hover {
+	background: rgba(101, 119, 134, 0.2);
+	-moz-box-shadow: 1px 1px 3px 2px #657786;
+	-webkit-box-shadow: 1px 1px 3px 2px #657786;
+	box-shadow: 1px 1px 3px 2px #657786;
+}
+/********** End Next Page **********/
+
+/*======  Start the Footer Section  ======*/
+
+.page__footer {
+	color: var(--white);
+	font-size: 1rem;
+	padding-top: var(--space20);
+	padding-bottom: var(--space20);
+	display: flex;
+	flex-direction: column-reverse;
+
+	justify-content: center;
+	align-items: center;
+	border: 1px solid var(--dark-Gray);
+}
+
+.page__footer:hover {
+	background: rgba(101, 119, 134, 0.07);
+	-moz-box-shadow: 1px 1px 3px 2px #657786;
+	-webkit-box-shadow: 1px 1px 3px 2px #657786;
+	box-shadow: 1px 1px 3px 2px #657786;
+	border: 1px solid #657786;
+}
+
+.page__footer__container {
+	width: 100%;
+	display: flex;
+	padding: 1rem;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+
+.page__footer .footer__copyRight {
+	margin: 1rem 0;
+}
+
+.page__footer .fa-heart {
+	color: var(--red);
+	font-size: 1.2rem;
+}
+
+.page__footer a {
+	text-decoration: none;
+	color: var(--white);
+}
+
+.page__footer a.twitter,
+.page__footer a.name {
+	color: var(--blue);
+}
+
+.page__footer a:hover {
+	text-decoration: underline;
+	cursor: pointer;
+	color: var(--blue);
+}
+
+.page__footer .footer__socialMedia {
+	display: flex;
+}
+
+.page__footer .footer__socialMedia a {
+	margin: 8px;
+}
+
+.page__footer .footer__socialMedia .facebook:hover {
+	color: #3b5998;
+}
+
+.page__footer .footer__socialMedia .twitter:hover {
+	color: #1da1f2;
+}
+
+.page__footer .footer__socialMedia .instagram:hover {
+	color: #405de6;
+}
+
+.page__footer .footer__socialMedia .github:hover {
+	color: #ffd33d;
+}
+
+.page__footer .footer__socialMedia .linkedin:hover {
+	color: #2867b2;
+}
+
+/********** Start components **********/
+.padding20 {
+	padding: 20px;
+}
+
+.padding-top20 {
+	padding-top: 20px;
+}
+
+.margin20 {
+	margin: 20px;
+}
+/********** End components **********/
+
+/********** Start Scroll Top **********/
+.back-to-top {
+	cursor: pointer;
+	position: fixed;
+	bottom: 35px;
+	right: 10px;
+	width: var(--space40);
+	height: var(--space40);
+	background: var(--blue);
+	border-radius: var(--space50);
+	-webkit-border-radius: var(--space50);
+	-moz-border-radius: var(--space50);
+	-ms-border-radius: var(--space50);
+	-o-border-radius: var(--space50);
+	border: 0;
+	outline: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.back-to-top i {
+	background: var(--blue);
+	height: var(--space40);
+	width: var(--space40);
+	color: var(--white);
+	text-align: center;
+	line-height: 40px;
+	font-size: var(--space20);
+	border-radius: var(--space50);
+	-webkit-border-radius: var(--space50);
+	-moz-border-radius: var(--space50);
+	-ms-border-radius: var(--space50);
+	-o-border-radius: var(--space50);
+	transition: var(--transition-duration);
+	-webkit-transition: var(--transition-duration);
+	-moz-transition: var(--transition-duration);
+	-ms-transition: var(--transition-duration);
+	-o-transition: var(--transition-duration);
+}
+
+@media (max-width: 380px) {
+	.back-to-top {
+		bottom: var(--space100);
+	}
+}
+/********** End Scroll Top **********/
+sign-in-login

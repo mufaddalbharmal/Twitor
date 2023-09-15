@@ -1,0 +1,244 @@
+/**
+ * ******* Start main container *********
+ *
+ * @format
+ */
+
+.grid-container .tweets-main-wrapper {
+	display: flex;
+	flex-direction: column;
+	padding-top: 20px;
+	border: 1px solid var(--dark-Gray);
+	border-top: none;
+	flex: 1;
+}
+
+.grid-container .tweets-main-wrapper .tweets-home-container {
+	color: var(--light-Gray);
+	display: flex;
+	justify-content: space-between;
+	min-height: 25px;
+	padding: 20px;
+	padding-top: 0;
+	border-bottom: 1px solid var(--dark-Gray);
+}
+
+.grid-container .tweets-main-wrapper .tweets-home-container .home {
+	font-size: 1.5rem;
+}
+
+.grid-container .tweets-main-wrapper .tweets-home-container i {
+	color: var(--light-Gray);
+}
+
+@media (max-width: 992px) {
+	.grid-container .tweets-main-wrapper .tweets-home-container i {
+		display: none;
+	}
+}
+
+.grid-container .tweets-main-wrapper .tweets-search-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: var(--light-Gray);
+	border-bottom: 1px solid var(--dark-Gray);
+}
+
+.grid-container .tweets-main-wrapper .tweets-search-container {
+	position: relative;
+}
+
+.grid-container .tweets-main-wrapper .tweets-search-container input {
+	width: 100%;
+	padding: 20px;
+	background: transparent;
+	color: var(--white);
+	border: none;
+	font-size: 30px;
+	padding-right: 60px;
+}
+
+.grid-container .tweets-main-wrapper .search-icon-wrapper {
+	position: absolute;
+	cursor: pointer;
+	right: 20px;
+	top: 50%;
+	transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+}
+
+.grid-container .tweets-main-wrapper .tweets-list-container {
+	padding: 20px;
+	color: var(--light-Gray);
+	border-bottom: 1px solid var(--dark-Gray);
+	cursor: pointer;
+	transition: var(--transition-duration);
+	-webkit-transition: var(--transition-duration);
+	-moz-transition: var(--transition-duration);
+	-ms-transition: var(--transition-duration);
+	-o-transition: var(--transition-duration);
+}
+
+.grid-container .tweets-main-wrapper .tweets-list-container:hover {
+	background: rgba(101, 119, 134, 0.07);
+	-moz-box-shadow: 1px 1px 3px 2px #657786;
+	-webkit-box-shadow: 1px 1px 3px 2px #657786;
+	box-shadow: 1px 1px 3px 2px #657786;
+	border: 1px solid #657786;
+}
+
+.grid-container .tweets-list-container .welcome-message-container {
+	position: relative;
+	margin-bottom: 30px !important;
+	min-height: 110px;
+	padding-bottom: 20px;
+}
+
+.grid-container .tweets-list-container .welcome-message-container p {
+	margin-top: 10px;
+	margin-bottom: 20px !important;
+}
+
+.grid-container .tweets-list-container .welcome-message-container:after {
+	content: "";
+	position: absolute;
+	left: -20px;
+	right: 0;
+	bottom: -25px;
+	height: 1px;
+	width: calc(100% + 40px);
+	background: var(--dark-Gray);
+	margin-bottom: 30px;
+}
+
+.grid-container .tweets-list-container .tweets-user-info {
+	display: flex;
+	align-items: center;
+	color: var(--light-Gray);
+	position: relative;
+}
+
+.grid-container .tweets-main-wrapper .tweets-user-info-add {
+	position: absolute;
+	right: 0;
+	top: calc(50% - 10px);
+	transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+}
+
+.grid-container .tweets-list-container .tweets-user-info .image {
+	height: 60px;
+	width: 60px;
+	background: url("../img/profle.jpg") no-repeat center center/cover;
+	border-radius: 50%;
+	margin-right: 10px;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-ms-border-radius: 50%;
+	-o-border-radius: 50%;
+}
+
+.grid-container .tweets-list-container .tweets-user-info .info {
+	display: flex;
+	flex-direction: column;
+}
+
+.grid-container .tweets-list-container .tweets-user-info .info .name {
+	font-weight: bold;
+	color: var(--white);
+}
+
+.grid-container .tweets-list-container .tweets-text-container {
+	padding: 20px;
+	min-height: 100px;
+	max-height: 300px;
+	overflow: hidden;
+	color: var(--white);
+}
+
+.grid-container .tweets-list-container .tweets-text-container span.hastag {
+	color: var(--blue);
+}
+
+.grid-container .tweets-list-container .tweets-images-container {
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+	grid-column-gap: 20px;
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-o-border-radius: 10px;
+}
+
+.grid-container .tweets-list-container .tweets-images-container .img {
+	height: 190px;
+	margin-bottom: 10px;
+}
+
+/* video and gifts  */
+.tweet-video-container {
+	position: relative;
+	border: 1px solid var(--dark-Gray);
+	border-radius: 20px;
+	height: 230px;
+	overflow: hidden;
+	padding: 20px;
+}
+
+.tweet-video-container video {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0%;
+	left: 0%;
+}
+
+.grid-container .tweets-list-container .tweets-images-container img {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+}
+
+.grid-container .tweets-list-container .tweets-date-container {
+	margin: 20px 0;
+	font-size: 15px;
+	color: var(--dark-Gray);
+}
+
+.grid-container .tweets-list-container .tweets-addtional-container {
+	display: flex;
+	justify-content: space-between;
+}
+
+.grid-container .tweets-list-container .tweets-addtional-container {
+	cursor: pointer;
+	font-size: 17px;
+	transition: var(--transition-duration);
+	-webkit-transition: var(--transition-duration);
+	-moz-transition: var(--transition-duration);
+	-ms-transition: var(--transition-duration);
+	-o-transition: var(--transition-duration);
+}
+
+.grid-container .tweets-addtional-container i.fa-share-alt:hover,
+.grid-container .tweets-addtional-container i.reply:hover {
+	color: var(--blue);
+}
+
+.grid-container .tweets-addtional-container i.fa-heart:hover {
+	color: red;
+}
+
+.grid-container .tweets-addtional-container i.fa-retweet:hover {
+	color: green;
+}
+/********** End main container **********/
